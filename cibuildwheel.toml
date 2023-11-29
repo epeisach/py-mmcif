@@ -2,6 +2,7 @@
 # Skip building PyPy version as not specifically validated/tested yet
 # Alpine linux is musslinux.  Takes long time to generate.  Will add if requested
 skip = ["pp*", "*-musllinux*"]
+build = "cp39-*"
 
 [tool.cibuildwheel.linux]
 before-all = "yum -y install flex bison cmake"
