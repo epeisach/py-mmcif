@@ -163,7 +163,8 @@ jobs:
           #
           - script: |
               rm -rf "$(System.DefaultWorkingDirectory)/build"
-              (export CIBW_ARCHS_MACOS="x86_64 arm64"; cibuildwheel --config cibuildwheel.toml --output-dir "$(System.DefaultWorkingDirectory)/dist" .)
+              export CIBW_ARCHS_MACOS="x86_64 arm64"
+              cibuildwheel --config cibuildwheel.toml --output-dir "$(System.DefaultWorkingDirectory)/dist" .
             displayName: "Build binary wheels"
           #
           #- script: python setup.py  sdist --dist-dir "$(System.DefaultWorkingDirectory)/udist"
