@@ -6,8 +6,9 @@ skip = ["pp*", "*-musllinux*"]
 [tool.cibuildwheel.linux]
 before-all = "yum -y install flex bison cmake"
 
-#cibuildwheel urllib import version 3.7 has old OpenSSL and we cannot test
-test-skip = ["cp37-manylinux_x86_64"]
+# cibuildwheel docker environment for python 3.7 has old OpenSSL
+# requests installs latest urllib3 which will not work with it
+test-skip = ["cp37-manylinux_x86_64", "cp37-manylinux_i686"]
 
 test-command = 'python -c "from mmcif.io.IoAdapterCore import IoAdapterCore as IoAdapter"'
 
