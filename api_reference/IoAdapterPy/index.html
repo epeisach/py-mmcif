@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../static/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1192,6 +1192,7 @@
         <span class="n">useStringTypes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">useFloat64</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">copyInputData</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">ignoreCastErrors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write input list of data containers to the specified output file path in mmCIF or BCIF format.</span>
@@ -1216,6 +1217,7 @@
 <span class="sd">            useStringTypes (bool, optional): assume all types are string (for BCIF files only). Defaults to False.</span>
 <span class="sd">            useFloat64 (bool, optional): store floats with 64 bit precision (for BCIF files only). Defaults to False.</span>
 <span class="sd">            copyInputData (bool, optional): make a new copy input data (for BCIF files only). Defaults to False.</span>
+<span class="sd">            ignoreCastErrors (bool, optional): suppress errors when casting attribute types with dictionaryApi. Defaults to False.</span>
 
 <span class="sd">            **kwargs: Placeholder for unsupported key value pairs</span>
 
@@ -1258,6 +1260,7 @@
                         <span class="n">useStringTypes</span><span class="o">=</span><span class="n">useStringTypes</span><span class="p">,</span>
                         <span class="n">useFloat64</span><span class="o">=</span><span class="n">useFloat64</span><span class="p">,</span>
                         <span class="n">copyInputData</span><span class="o">=</span><span class="n">copyInputData</span><span class="p">,</span>
+                        <span class="n">ignoreCastErrors</span><span class="o">=</span><span class="n">ignoreCastErrors</span><span class="p">,</span>
                     <span class="p">)</span>
                     <span class="n">bcifW</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">outputFilePath</span><span class="p">,</span> <span class="n">containerList</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
@@ -1669,7 +1672,7 @@ rather the particular failure that raised a parsing exception.</p>
 
 
 <h2 id="mmcif.io.IoAdapterPy.IoAdapterPy.writeFile" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">writeFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outputFilePath</span><span class="p">,</span> <span class="n">containerList</span><span class="p">,</span> <span class="n">maxLineLength</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">enforceAscii</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lastInOrder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">selectOrder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columnAlignFlag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">useStopTokens</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">formattingStep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;mmcif&#39;</span><span class="p">,</span> <span class="n">storeStringsAsBytes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">defaultStringEncoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">applyTypes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dictionaryApi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useStringTypes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">useFloat64</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">copyInputData</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">writeFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outputFilePath</span><span class="p">,</span> <span class="n">containerList</span><span class="p">,</span> <span class="n">maxLineLength</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">enforceAscii</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lastInOrder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">selectOrder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columnAlignFlag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">useStopTokens</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">formattingStep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;mmcif&#39;</span><span class="p">,</span> <span class="n">storeStringsAsBytes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">defaultStringEncoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">applyTypes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dictionaryApi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useStringTypes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">useFloat64</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">copyInputData</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignoreCastErrors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
 </h2>
@@ -1792,6 +1795,12 @@ rather the particular failure that raised a parsing exception.</p>
         <td><code>False</code></td>
       </tr>
       <tr>
+        <td><code>ignoreCastErrors</code></td>
+        <td><code>bool</code></td>
+        <td><p>suppress errors when casting attribute types with dictionaryApi. Defaults to False.</p></td>
+        <td><code>False</code></td>
+      </tr>
+      <tr>
         <td><code>**kwargs</code></td>
         <td></td>
         <td><p>Placeholder for unsupported key value pairs</p></td>
@@ -1835,6 +1844,7 @@ rather the particular failure that raised a parsing exception.</p>
     <span class="n">useStringTypes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">useFloat64</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">copyInputData</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">ignoreCastErrors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Write input list of data containers to the specified output file path in mmCIF or BCIF format.</span>
@@ -1859,6 +1869,7 @@ rather the particular failure that raised a parsing exception.</p>
 <span class="sd">        useStringTypes (bool, optional): assume all types are string (for BCIF files only). Defaults to False.</span>
 <span class="sd">        useFloat64 (bool, optional): store floats with 64 bit precision (for BCIF files only). Defaults to False.</span>
 <span class="sd">        copyInputData (bool, optional): make a new copy input data (for BCIF files only). Defaults to False.</span>
+<span class="sd">        ignoreCastErrors (bool, optional): suppress errors when casting attribute types with dictionaryApi. Defaults to False.</span>
 
 <span class="sd">        **kwargs: Placeholder for unsupported key value pairs</span>
 
@@ -1901,6 +1912,7 @@ rather the particular failure that raised a parsing exception.</p>
                     <span class="n">useStringTypes</span><span class="o">=</span><span class="n">useStringTypes</span><span class="p">,</span>
                     <span class="n">useFloat64</span><span class="o">=</span><span class="n">useFloat64</span><span class="p">,</span>
                     <span class="n">copyInputData</span><span class="o">=</span><span class="n">copyInputData</span><span class="p">,</span>
+                    <span class="n">ignoreCastErrors</span><span class="o">=</span><span class="n">ignoreCastErrors</span><span class="p">,</span>
                 <span class="p">)</span>
                 <span class="n">bcifW</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">outputFilePath</span><span class="p">,</span> <span class="n">containerList</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
@@ -2016,7 +2028,7 @@ rather the particular failure that raised a parsing exception.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
