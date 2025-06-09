@@ -353,6 +353,114 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#build_dict_cli-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_dict_cli tool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="build_dict_cli tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command-Line Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-generator-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Generator File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Generator File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-generator-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Generator File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-components-in-a-generator-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components in a Generator File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Use Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-dictionary-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving Dictionary Version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1023,6 +1131,114 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#build_dict_cli-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_dict_cli tool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="build_dict_cli tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command-Line Arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-generator-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Generator File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Generator File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-generator-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Generator File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-components-in-a-generator-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components in a Generator File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Use Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-dictionary-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving Dictionary Version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1068,22 +1284,129 @@ pip<span class="w"> </span>install<span class="w"> </span>.
 <span class="c1"># Check Sphinx dependencies in the introductory comments to the following script.</span>
 ./initdocs.sh
 </code></pre></div>
-<p>A command-line script is provided as a preprocessor for modular dictionaries that
-include definition and data content using categories pdbx_include_dictionary,
-pdbx_include_category and pdbx_include_item.</p>
-<div class="highlight"><pre><span></span><code>build_dict_cli<span class="w"> </span>--help
-usage:<span class="w"> </span>build_dict_cli<span class="w"> </span><span class="o">[</span>-h<span class="o">]</span><span class="w"> </span>--op<span class="w"> </span>OP<span class="w"> </span>--input_dict_path<span class="w"> </span>INPUT_DICT_PATH<span class="w"> </span><span class="o">[</span>--output_dict_path<span class="w"> </span>OUTPUT_DICT_PATH<span class="o">]</span><span class="w"> </span><span class="o">[</span>--cleanup<span class="o">]</span>
+<h2 id="build_dict_cli-tool">build_dict_cli tool</h2>
+<h3 id="overview">Overview</h3>
+<p><code>build_dict_cli</code> is a command-line tool that serves as a preprocessor for modular mmCIF dictionaries. It resolves and combines dictionary components from multiple source files using include directives specified in categories such as <code>pdbx_include_dictionary</code>, <code>pdbx_include_category</code>, and <code>pdbx_include_item</code>.</p>
+<h3 id="purpose">Purpose</h3>
+<p>The tool allows dictionary maintainers to:
+- Combine multiple dictionary extensions (or combining extension with a parent dictionary) into a single comprehensive dictionary
+- Get dictionary version of the dictionary</p>
+<h4 id="command-line-arguments">Command-Line Arguments</h4>
+<div class="highlight"><pre><span></span><code>build_dict_cli --help
+usage: build_dict_cli [-h] --op OP --input_dict_path INPUT_DICT_PATH [--output_dict_path OUTPUT_DICT_PATH] [--cleanup]
 
-optional<span class="w"> </span>arguments:
-<span class="w">  </span>-h,<span class="w"> </span>--help<span class="w">            </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
-<span class="w">  </span>--op<span class="w"> </span>OP<span class="w">               </span>Operation<span class="w"> </span><span class="o">(</span>build<span class="w"> </span><span class="p">|</span><span class="w"> </span>get_version<span class="o">)</span>
-<span class="w">  </span>--input_dict_path<span class="w"> </span>INPUT_DICT_PATH
-<span class="w">                        </span>Path<span class="w"> </span>to<span class="w"> </span>dictionary<span class="w"> </span>generator<span class="w"> </span>file
-<span class="w">  </span>--output_dict_path<span class="w"> </span>OUTPUT_DICT_PATH
-<span class="w">                        </span>Path<span class="w"> </span>to<span class="w"> </span>output<span class="w"> </span>dictionary<span class="w"> </span>text<span class="w"> </span>file
-<span class="w">  </span>--cleanup<span class="w">             </span>Remove<span class="w"> </span>include<span class="w"> </span>instruction<span class="w"> </span>categories<span class="w"> </span>after<span class="w"> </span>processing
-________________________________________________________________________________
+optional arguments:
+  -h, --help            show this help message and exit
+  --op OP               Operation (build | get_version)
+  --input_dict_path INPUT_DICT_PATH
+                        Path to dictionary generator file
+  --output_dict_path OUTPUT_DICT_PATH
+                        Path to output dictionary text file
+  --cleanup             Remove include instruction categories after processing
 </code></pre></div>
+<h5 id="argument-details">Argument Details</h5>
+<ul>
+<li><code>--op</code>: Specifies the operation to perform</li>
+<li><code>build</code>: Generates a complete dictionary by processing includes</li>
+<li>
+<p><code>get_version</code>: Retrieves and outputs the version of the specified dictionary</p>
+</li>
+<li>
+<p><code>--input_dict_path</code>: Path to the dictionary generator file that contains include directives</p>
+</li>
+<li>
+<p><code>--output_dict_path</code>: Path where the combined output dictionary will be written</p>
+</li>
+<li>
+<p><code>--cleanup</code>: If specified, removes the include instruction categories from the final output</p>
+</li>
+</ul>
+<h3 id="creating-a-generator-file">Creating a Generator File</h3>
+<p>A generator file is a special mmCIF dictionary file that primarily contains include directives. This file serves as the entry point for the dictionary build process.</p>
+<h4 id="example-generator-file">Example Generator File</h4>
+<div class="highlight"><pre><span></span><code># mmcif_pdbx_v50-generator.dic
+
+data_mmcif_pdbx.dic
+#
+loop_
+_pdbx_include_dictionary.dictionary_id
+_pdbx_include_dictionary.dictionary_locator
+_pdbx_include_dictionary.include_mode
+_pdbx_include_dictionary.dictionary_namespace_prefix
+_pdbx_include_dictionary.dictionary_namespace_prefix_replace
+mmcif_pdbx_v50.dic          mmcif_pdbx_v50.dic          extend . .
+mmcif_investigation_fraghub_ext.dic      mmcif_investigation_fraghub_ext.dic  extend . .
+</code></pre></div>
+<h4 id="key-components-in-a-generator-file">Key Components in a Generator File</h4>
+<ul>
+<li><code>dictionary_id</code>: Identifier for the dictionary to be included</li>
+<li><code>dictionary_locator</code>: File path to the dictionary (relative to the generator file)</li>
+<li><code>include_mode</code>: How to incorporate the dictionary (typically "extend")</li>
+<li><code>dictionary_namespace_prefix</code>: Namespace prefix for the included dictionary (use "." for none)</li>
+<li><code>dictionary_namespace_prefix_replace</code>: Replacement for the namespace prefix (use "." for none)</li>
+</ul>
+<h3 id="usage-workflow">Usage Workflow</h3>
+<ol>
+<li><strong>Prepare Dictionary Components</strong>:</li>
+<li>Create or obtain the dictionary files you want to combine</li>
+<li>
+<p>Ensure all dictionary files are present in the same directory or specify the correct relative paths</p>
+</li>
+<li>
+<p><strong>Create a Generator File</strong>:</p>
+</li>
+<li>Define a new mmCIF file with <code>_pdbx_include_dictionary</code> loop</li>
+<li>
+<p>List all dictionaries to be included with their proper attributes</p>
+</li>
+<li>
+<p><strong>Run the Build Command</strong>:
+   <div class="highlight"><pre><span></span><code>build_dict_cli<span class="w"> </span>--op<span class="w"> </span>build<span class="w"> </span>--input_dict_path<span class="w"> </span>generator-file.dic<span class="w"> </span>--output_dict_path<span class="w"> </span>output-dictionary.dic
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Verify the Output</strong>:</p>
+</li>
+<li>The tool will combine all specified dictionaries into a single output file</li>
+<li>Check that all expected categories and items are present in the output</li>
+</ol>
+<h3 id="example-use-case">Example Use Case</h3>
+<p>To combine a base PDBx dictionary with a InvestigationCIF extension dictionary:</p>
+<ol>
+<li>
+<p>Ensure both dictionaries are available in your working directory:
+   <div class="highlight"><pre><span></span><code>mmcif_pdbx_v50.dic
+mmcif_investigation_fraghub_ext.dic
+</code></pre></div></p>
+</li>
+<li>
+<p>Create a generator file (e.g., <code>mmcif_pdbx_v50-generator-local.dic</code>):
+   <div class="highlight"><pre><span></span><code>data_mmcif_pdbx.dic
+#
+loop_
+_pdbx_include_dictionary.dictionary_id
+_pdbx_include_dictionary.dictionary_locator
+_pdbx_include_dictionary.include_mode
+_pdbx_include_dictionary.dictionary_namespace_prefix
+_pdbx_include_dictionary.dictionary_namespace_prefix_replace
+mmcif_pdbx_v50.dic          mmcif_pdbx_v50.dic          extend . .
+mmcif_investigation_fraghub_ext.dic      mmcif_investigation_fraghub_ext.dic  extend . .
+</code></pre></div></p>
+</li>
+<li>
+<p>Run the build command:
+   <div class="highlight"><pre><span></span><code><span class="w"> </span>build_dict_cli<span class="w"> </span>--op<span class="w"> </span>build<span class="w"> </span>--input_dict_path<span class="w"> </span>mmcif_pdbx_v50-generator-local.dic<span class="w"> </span>--output_dict_path<span class="w"> </span>./mmcif_investigation_fraghub.dic
+</code></pre></div></p>
+</li>
+<li>
+<p>The tool will produce <code>mmcif_investigation_fraghub.dic</code> containing the combined content of both dictionaries.</p>
+</li>
+</ol>
+<h3 id="retrieving-dictionary-version">Retrieving Dictionary Version</h3>
+<p>To get the version of a dictionary:</p>
+<div class="highlight"><pre><span></span><code>build_dict_cli<span class="w"> </span>--op<span class="w"> </span>get_version<span class="w"> </span>--input_dict_path<span class="w"> </span>mmcif_pdbx_v50.dic
+</code></pre></div>
+<p>This will output only the version number to stdout.</p>
 
 
 

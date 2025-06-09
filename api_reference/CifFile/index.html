@@ -791,9 +791,60 @@
         <li class="md-nav__item">
   <a href="#mmcif.io.CifFile.CifFile" class="md-nav__link">
     <span class="md-ellipsis">
-      mmcif.io.CifFile.CifFile
+      CifFile
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="CifFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.getCifFile" class="md-nav__link">
+    <span class="md-ellipsis">
+      getCifFile()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.getFileExt" class="md-nav__link">
+    <span class="md-ellipsis">
+      getFileExt()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.read" class="md-nav__link">
+    <span class="md-ellipsis">
+      read()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.write" class="md-nav__link">
+    <span class="md-ellipsis">
+      write()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -986,9 +1037,60 @@
         <li class="md-nav__item">
   <a href="#mmcif.io.CifFile.CifFile" class="md-nav__link">
     <span class="md-ellipsis">
-      mmcif.io.CifFile.CifFile
+      CifFile
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="CifFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.getCifFile" class="md-nav__link">
+    <span class="md-ellipsis">
+      getCifFile()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.getFileExt" class="md-nav__link">
+    <span class="md-ellipsis">
+      getFileExt()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.read" class="md-nav__link">
+    <span class="md-ellipsis">
+      read()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmcif.io.CifFile.CifFile.write" class="md-nav__link">
+    <span class="md-ellipsis">
+      write()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1015,7 +1117,16 @@
 
 <div class="doc doc-object doc-class">
 
-<a id="mmcif.io.CifFile.CifFile"></a>
+
+
+<h2 id="mmcif.io.CifFile.CifFile" class="doc doc-heading">
+        <code>
+mmcif.io.CifFile.CifFile        </code>
+
+
+
+</h2>
+
     <div class="doc doc-contents first">
 
       <p>CifFile</p>
@@ -1080,8 +1191,144 @@
 
 
 
+  <div class="doc doc-object doc-method">
 
 
+
+<h4 id="mmcif.io.CifFile.CifFile.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">,</span> <span class="n">parseLogFileName</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+
+        <details class="quote">
+          <summary>Source code in <code>mmcif/io/CifFile.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">,</span> <span class="n">parseLogFileName</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__fileName</span> <span class="o">=</span> <span class="n">fileName</span>
+
+    <span class="k">if</span> <span class="n">parseLogFileName</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__cifFile</span> <span class="o">=</span> <span class="n">ParseCifSimple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__fileName</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__cifFile</span> <span class="o">=</span> <span class="n">ParseCifSimple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__fileName</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">parseLogFileName</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="mmcif.io.CifFile.CifFile.getCifFile" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">getCifFile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+
+        <details class="quote">
+          <summary>Source code in <code>mmcif/io/CifFile.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">getCifFile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cifFile</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="mmcif.io.CifFile.CifFile.getFileExt" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">getFileExt</span><span class="p">()</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+
+        <details class="quote">
+          <summary>Source code in <code>mmcif/io/CifFile.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">getFileExt</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;cif&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="mmcif.io.CifFile.CifFile.read" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">read</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+
+        <details class="quote">
+          <summary>Source code in <code>mmcif/io/CifFile.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="mmcif.io.CifFile.CifFile.write" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span></code>
+
+
+</h4>
+
+    <div class="doc doc-contents ">
+
+
+        <details class="quote">
+          <summary>Source code in <code>mmcif/io/CifFile.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">__cifFile</span><span class="o">.</span><span class="n">Write</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
 
 
 
